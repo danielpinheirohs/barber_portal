@@ -1,0 +1,42 @@
+{
+  "files.exclude": {
+    "**/.gitignore": true,
+    "**/.dart_tool/**": true,
+    "**/.idea/**": true,
+    "**/build/**": true,
+    "**/android/**": true,
+    "**/ios/**": true,
+    "**/test/**": true,
+    "**/web/**": true,
+    "**/linux/**": true,
+    "**/windows/**": true,
+    "**/.metadata": true,
+    "**/analysis_options.yaml": true,
+    "**/pubspec.lock": true,
+    "**/.flutter-plugins": true,
+    "**/.flutter-plugins-dependencies": true,
+    "**/barber_portal.iml": true,
+    "**/README.md": true,
+    //Firebase
+    "**/.firebase": true,
+    "**/.firebaserc": true,
+    "**/firebase.json": true,
+    "**/firestore.rules": true,
+    "**/firestore.indexes.json": true,
+    "**/public": true,
+  },
+  "[dart]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    },
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      120
+    ],
+  },
+  "dart.lineLength": 120,
+  "workbench.iconTheme": "material-icon-theme",
+  "cmake.configureOnOpen": true
+}
