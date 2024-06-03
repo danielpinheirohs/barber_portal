@@ -1,6 +1,8 @@
+import 'package:barber_portal/features/customer/view/customer_page.dart';
 import 'package:barber_portal/features/login/view/login_page.dart';
 import 'package:barber_portal/features/professional/view/professional_page.dart';
 import 'package:barber_portal/features/schedule/view/schedule_page.dart';
+import 'package:barber_portal/features/service/view/service_page.dart';
 import 'package:barber_portal/shared/base_page/base_page.dart';
 import 'package:go_router/go_router.dart';
 
@@ -35,6 +37,30 @@ final routes = [
       return CustomTransitionPage(
         key: state.pageKey,
         child: const BasePage(page: ProfessionalPage()),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          return child; // Transição instantânea
+        },
+      );
+    },
+  ),
+  GoRoute(
+    path: '/service',
+    pageBuilder: (context, state) {
+      return CustomTransitionPage(
+        key: state.pageKey,
+        child: const BasePage(page: ServicePage()),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          return child; // Transição instantânea
+        },
+      );
+    },
+  ),
+  GoRoute(
+    path: '/customer',
+    pageBuilder: (context, state) {
+      return CustomTransitionPage(
+        key: state.pageKey,
+        child: const BasePage(page: CustomerPage()),
         transitionsBuilder: (context, animation, secondaryAnimation, child) {
           return child; // Transição instantânea
         },

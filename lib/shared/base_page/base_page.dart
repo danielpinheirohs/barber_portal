@@ -98,7 +98,7 @@ class _BasePageState extends State<BasePage> {
                             BRBMenuItem(
                               icon: Icons.people,
                               text: 'Clientes',
-                              onPressed: () => context.go('/customers'),
+                              onPressed: () => context.go('/customer'),
                             ),
                             const SizedBox(height: 24),
                             BRBMenuItem(
@@ -133,13 +133,13 @@ class _BasePageState extends State<BasePage> {
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         BRBText.bodyLarge(
-                                          text: 'Não informado...',
+                                          text: context.read<AppState>().currentWebUser?.name ?? 'Não informado...',
                                           maxLines: 1,
                                           color: Colors.white,
                                         ),
                                         const SizedBox(height: 4),
                                         BRBText.labelSmall(
-                                          text: 'Não informado...',
+                                          text: context.read<AppState>().currentWebUser?.email ?? 'Não informado...',
                                           maxLines: 1,
                                           color: Colors.white,
                                         ),
